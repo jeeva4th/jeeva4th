@@ -1,92 +1,64 @@
-<svg width="850" height="240" viewBox="0 0 850 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="340" viewBox="0 0 1000 340" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bg_grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0b0e14" />
-      <stop offset="50%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#161b22" />
+      <stop offset="55%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#1a0e16" />
     </linearGradient>
-
-    <!-- Crimson Accent Gradient -->
-    <linearGradient id="accent_grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#e50914" />
       <stop offset="50%" stop-color="#ff2a5f" />
-      <stop offset="100%" stop-color="#ff5e7e" />
+      <stop offset="100%" stop-color="#ff7a3d" />
     </linearGradient>
-
-    <!-- Subtle Grid Pattern -->
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#21262d" stroke-width="0.7" stroke-opacity="0.4" />
-      <circle cx="0" cy="0" r="1" fill="#30363d" fill-opacity="0.6" />
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#ffb3c2" />
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#21262d" stroke-width="0.7" stroke-opacity="0.35" />
+      <circle cx="0" cy="0" r="1.2" fill="#30363d" fill-opacity="0.7" />
     </pattern>
-
-    <!-- Glow Filter -->
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feGaussianBlur stdDeviation="8" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
-  <!-- Base Card -->
-  <rect width="850" height="240" rx="12" fill="url(#bg_grad)" />
-  <rect width="850" height="240" rx="12" fill="url(#grid)" />
-  
-  <!-- Outer Border -->
-  <rect x="1" y="1" width="848" height="238" rx="11" fill="none" stroke="#30363d" stroke-width="1.2" stroke-opacity="0.8" />
+  <rect width="1000" height="340" rx="16" fill="url(#bg)" />
+  <rect width="1000" height="340" rx="16" fill="url(#grid)" />
+  <rect x="1" y="1" width="998" height="338" rx="15" fill="none" stroke="#30363d" stroke-width="1.2" stroke-opacity="0.8" />
+  <path d="M 16 1 L 984 1" stroke="url(#accent)" stroke-width="5" stroke-linecap="round" />
 
-  <!-- Top Accent Bar -->
-  <path d="M 12 1 L 838 1" stroke="url(#accent_grad)" stroke-width="3" stroke-linecap="round" />
+  <circle cx="880" cy="60" r="110" fill="#e50914" fill-opacity="0.12" filter="url(#glow)" />
+  <circle cx="120" cy="280" r="90" fill="#ff2a5f" fill-opacity="0.07" filter="url(#glow)" />
 
-  <!-- Ambient Light Orbs -->
-  <circle cx="760" cy="50" r="90" fill="#e50914" fill-opacity="0.08" filter="url(#glow)" />
-  <circle cx="100" cy="180" r="70" fill="#ff2a5f" fill-opacity="0.05" filter="url(#glow)" />
-
-  <!-- Status Indicator Badge -->
-  <g transform="translate(50, 42)">
-    <rect width="180" height="26" rx="13" fill="#161b22" stroke="#30363d" stroke-width="1" />
-    <circle cx="15" cy="13" r="4" fill="#2ea043">
-      <animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite" />
+  <!-- Status -->
+  <g transform="translate(56, 44)">
+    <rect width="196" height="30" rx="15" fill="#161b22" stroke="#ff2a5f" stroke-width="1" />
+    <circle cx="18" cy="15" r="5" fill="#2ea043">
+      <animate attributeName="opacity" values="1;0.35;1" dur="2.2s" repeatCount="indefinite" />
     </circle>
-    <text x="28" y="17" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', Roboto, sans-serif" font-size="11" font-weight="600" letter-spacing="1">SYSTEMS ACTIVE</text>
+    <text x="34" y="19" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">SYSTEMS ACTIVE</text>
   </g>
 
-  <!-- Name / Title -->
-  <text x="50" y="112" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', Roboto, sans-serif" font-size="38" font-weight="800" letter-spacing="-0.5">
-    JEEVA
-  </text>
-  
-  <text x="180" y="110" fill="url(#accent_grad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', Roboto, sans-serif" font-size="28" font-weight="300" letter-spacing="0">
-    /
-  </text>
+  <!-- Name -->
+  <text x="54" y="172" fill="url(#titleGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="96" font-weight="900" letter-spacing="-2">JEEVA</text>
+  <text x="56" y="214" fill="#ff2a5f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="800" letter-spacing="0.5">Software Engineer &amp; AI Architect</text>
+  <text x="56" y="248" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="400">Autonomous multi-agent systems. Production backends. Full-stack software that ships.</text>
 
-  <text x="200" y="110" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', Roboto, sans-serif" font-size="20" font-weight="500" letter-spacing="0.5">
-    Software Engineer &amp; AI Architect
-  </text>
-
-  <!-- Subtitle / Tagline -->
-  <text x="50" y="148" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', Roboto, sans-serif" font-size="14" font-weight="400" letter-spacing="0.2">
-    Engineering autonomous multi-agent networks, production backends, and full-stack software systems.
-  </text>
-
-  <!-- Divider Line -->
-  <line x1="50" y1="172" x2="800" y2="172" stroke="#21262d" stroke-width="1" />
-
-  <!-- Bottom Core Pillars -->
-  <g transform="translate(50, 198)">
-    <!-- Pillar 1 -->
-    <circle cx="4" cy="-4" r="3" fill="#ff2a5f" />
-    <text x="14" y="0" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', Roboto, sans-serif" font-size="12" font-weight="500">Autonomous Agentic Systems</text>
-
-    <!-- Pillar 2 -->
-    <circle cx="230" cy="-4" r="3" fill="#e50914" />
-    <text x="240" y="0" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', Roboto, sans-serif" font-size="12" font-weight="500">Full-Stack Architecture</text>
-
-    <!-- Pillar 3 -->
-    <circle cx="430" cy="-4" r="3" fill="#ff2a5f" />
-    <text x="440" y="0" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', Roboto, sans-serif" font-size="12" font-weight="500">LangGraph State Orchestration</text>
-
-    <!-- Pillar 4 -->
-    <circle cx="670" cy="-4" r="3" fill="#e50914" />
-    <text x="680" y="0" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', Roboto, sans-serif" font-size="12" font-weight="500">Zero-Cost Infra</text>
+  <!-- Bottom chips -->
+  <g transform="translate(56, 282)">
+    <rect width="252" height="34" rx="17" fill="#161b22" stroke="#30363d" stroke-width="1" />
+    <circle cx="18" cy="17" r="5" fill="#ff2a5f" />
+    <text x="32" y="21" fill="#e6edf3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">Autonomous Agentic Systems</text>
+    <g transform="translate(272, 0)">
+      <rect width="212" height="34" rx="17" fill="#161b22" stroke="#30363d" stroke-width="1" />
+      <circle cx="18" cy="17" r="5" fill="#ff7a3d" />
+      <text x="32" y="21" fill="#e6edf3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">Full-Stack Architecture</text>
+    </g>
+    <g transform="translate(504, 0)">
+      <rect width="238" height="34" rx="17" fill="#ff2a5f" stroke="#ff2a5f" stroke-width="1" />
+      <text x="18" y="21" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">LangGraph Orchestration</text>
+    </g>
   </g>
 </svg>
